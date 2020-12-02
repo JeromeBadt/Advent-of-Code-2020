@@ -42,7 +42,7 @@ public class Day2 {
         private static char character;
         private static String password;
 
-        private static void parse(String line) {
+        private static void parse(final String line) {
             var split = line.split("-");
             min = Integer.parseInt(split[0]);
             split = split[1].split(" ");
@@ -51,7 +51,7 @@ public class Day2 {
             password = split[2];
         }
 
-        private static long isValid1(String line) {
+        private static long isValid1(final String line) {
             parse(line);
             final var occurrences = countOccurrences(password, character);
 
