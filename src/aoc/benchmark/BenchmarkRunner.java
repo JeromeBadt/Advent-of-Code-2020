@@ -12,8 +12,8 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-@Warmup(iterations = 5, time = 200, timeUnit = TimeUnit.MILLISECONDS)
-@Measurement(iterations = 5, time = 200, timeUnit = TimeUnit.MILLISECONDS)
+@Warmup(iterations = 20, time = 200, timeUnit = TimeUnit.MILLISECONDS)
+@Measurement(iterations = 50, time = 200, timeUnit = TimeUnit.MILLISECONDS)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @BenchmarkMode(Mode.AverageTime)
 public class BenchmarkRunner {
@@ -35,11 +35,6 @@ public class BenchmarkRunner {
     @Benchmark
     public void day1_2() {
         Day1_2.threeSum();
-    }
-
-    @Benchmark
-    public void day1_2_parallel() {
-        Day1_2.threeSumParallel();
     }
 
     @Benchmark
