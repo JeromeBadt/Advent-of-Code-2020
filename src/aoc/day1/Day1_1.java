@@ -1,4 +1,4 @@
-package aoc.day1_1;
+package aoc.day1;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
