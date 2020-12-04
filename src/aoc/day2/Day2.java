@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import static aoc.util.Util.countOccurrences;
+
 public class Day2 {
     public static void main(String[] args) throws IOException {
         parse1();
@@ -22,18 +24,6 @@ public class Day2 {
         final var validCount = lines.filter(Line::isValid2).count();
 
         System.out.println(validCount);
-    }
-
-    private static int countOccurrences(final String str, final char searchChar) {
-        int count = 0;
-
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == searchChar) {
-                count++;
-            }
-        }
-
-        return count;
     }
 
     private static class Line {
