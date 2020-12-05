@@ -31,10 +31,8 @@ public class Day5 {
         final var lines = Files.lines(Paths.get("input\\day5.txt"));
         return lines.mapToInt(line -> {
             final var binaryLine = line.replaceAll("[FL]", "0").replaceAll("[BR]", "1");
-            final var row = Integer.parseInt(binaryLine.substring(0, 7), 2);
-            final var column = Integer.parseInt(binaryLine.substring(7), 2);
 
-            return row * 8 + column;
+            return Integer.parseInt(binaryLine, 2);
         });
     }
 }
