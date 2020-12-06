@@ -7,6 +7,7 @@ import aoc.day3.Day3;
 import aoc.day4.Day4_1;
 import aoc.day4.Day4_2;
 import aoc.day5.Day5;
+import aoc.day6.Day6;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
@@ -79,5 +80,15 @@ public class BenchmarkRunner {
     @Benchmark
     public void day5_2() throws IOException {
         Day5.parse2();
+    }
+
+    @Benchmark
+    public void day6_1() throws IOException {
+        Day6.parse1();
+    }
+
+    @Benchmark
+    public void day6_2() throws IOException {
+        Day6.parse2();
     }
 }
